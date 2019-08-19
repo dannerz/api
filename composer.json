@@ -14,5 +14,10 @@
         "spatie/laravel-json-api-paginate": "^1.5",
         "spatie/laravel-query-builder": "^1.17",
         "tymon/jwt-auth": "1.0.0-rc.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dannerz\\Api\\": "src/"
+        }
     }
 }
