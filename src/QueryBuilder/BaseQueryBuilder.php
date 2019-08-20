@@ -1,6 +1,6 @@
 <?php
 
-namespace Sota\Api\QueryBuilder;
+namespace Dannerz\Api\QueryBuilder;
 
 use Illuminate\Http\Request;
 
