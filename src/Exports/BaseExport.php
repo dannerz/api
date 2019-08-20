@@ -1,6 +1,6 @@
 <?php
 
-namespace Sota\Api\Export;
+namespace Dannerz\Api\Exports;
 
 use Maatwebsite\Excel\Excel;
 
