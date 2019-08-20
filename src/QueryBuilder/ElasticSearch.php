@@ -1,6 +1,6 @@
 <?php
 
-namespace Sota\Api\QueryBuilder;
+namespace Dannerz\Api\QueryBuilder;
 
 trait ElasticSearch
 {
