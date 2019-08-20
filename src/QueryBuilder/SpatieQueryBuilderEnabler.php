@@ -35,7 +35,14 @@ class SpatieQueryBuilderEnabler extends QueryBuilder
                 return $sort->isForProperty($property);
             });
 
-        return $sort ?: Sort::field(ltrim($property, '-'));
+        if (is_null($sort)) {
+            if (strpos($property, '.') !== false) {
+                return Sort::custom($property, SortsScope::class);
+            }
+            return Sort::field(ltrim($property, '-'));
+        }
+
+        return $sort;
     }
 
     protected function guardAgainstUnknownSorts()

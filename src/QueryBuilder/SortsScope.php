@@ -13,6 +13,10 @@ class SortsScope implements Sort
 
         $scope = 'sortBy'.$scope;
 
+        if (! method_exists($query->getModel(), 'scope'.studly_case($scope))) {
+            return $query->sortByParentColumn($property, $descending);
+        }
+
         return $query->$scope($descending);
     }
 }
