@@ -18,8 +18,8 @@ class RouteServiceProvider extends ServiceProvider
 
     protected function mapAuthRoutes()
     {
-        Route::prefix('auth')
-            ->middleware('auth')
+        Route::prefix('api')
+            ->middleware('api')
             ->group(function () {
                 Route::post('auth/login', '\\'.AuthController::class.'@login');
                 Route::post('auth/logout', '\\'.AuthController::class.'@logout');
@@ -30,7 +30,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapDefaultRoute()
     {
         Route::prefix('api')
-            ->middleware('api')
+            ->middleware(['auth', 'api'])
             ->group(function () {
                 Route::any('/{any}', '\\'.DefaultController::class.'@handle')->where('any', '.*');
             });
