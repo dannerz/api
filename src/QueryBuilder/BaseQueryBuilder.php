@@ -50,7 +50,7 @@ class BaseQueryBuilder
             $customFilters = $this->customFilters();
         }
 
-        $this->query->allowedFilters($customFilters ?? []);
+        $this->query->allowedFilters($customFilters ?? []); // necessary?
     }
 
     protected function prepareSorts()
@@ -59,12 +59,12 @@ class BaseQueryBuilder
             $customSorts = $this->customSorts();
         }
 
-        $this->query->allowedSorts($customSorts ?? []);
+        $this->query->allowedSorts($customSorts ?? []); // necessary?
     }
 
     protected function prepareIncludes()
     {
-        $this->query->allowedIncludes([]);
+        $this->query->allowedIncludes([]); // necessary?
     }
 
     public function getQuery()

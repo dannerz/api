@@ -31,4 +31,12 @@ class BaseService
 
         return $model->fresh();
     }
+
+    // TODO: Implement basic child & pivot handling again.
+
+    // TODO: Implement basic delete guard? Where guards against any children?
+
+    // TODO: Make commands.
+
+    // TODO: Spatie media?
 }
